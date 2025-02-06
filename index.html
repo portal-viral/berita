@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Viral Hari Ini</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            margin-bottom: 30px;
+        }
+        .news-item h2 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+        .news-item p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Berita Viral Hari Ini</h1>
+        <p>Informasi terkini tentang berita-berita viral yang sedang ramai dibicarakan.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#berita">Berita</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <div class="container" id="home">
+        <div class="news-item">
+            <h2>Viral! Penemuan Harta Karun di Hutan Amazon</h2>
+            <p>Seorang penjelajah amatir menemukan harta karun kuno yang diperkirakan berusia ratusan tahun di tengah hutan Amazon. Penemuan ini langsung menjadi sorotan dunia karena nilai sejarahnya yang sangat tinggi.</p>
+        </div>
+
+        <div class="news-item">
+            <h2>Heboh! Video TikTok Remaja Menyanyikan Lagu Daerah Mendunia</h2>
+            <p>Seorang remaja asal Indonesia menjadi viral setelah video TikTok-nya menyanyikan lagu daerah tradisional mendapatkan jutaan like dan dibagikan oleh selebritas internasional. Kini, lagu tersebut mulai dipopulerkan di berbagai platform musik global.</p>
+        </div>
+
+        <div class="news-item">
+            <h2>Fenomena Langit Malam: Gerhana Bulan Terlama Abad Ini</h2>
+            <p>Gerhana bulan terlama abad ini terjadi semalam dan berhasil diamati oleh jutaan orang di seluruh dunia. Fenomena alam ini menjadi perbincangan hangat di media sosial karena keindahannya yang memukau.</p>
+        </div>
+    </div>
+
+    <div class="container" id="kontak" style="display: none;">
+        <h2>Hubungi Kami</h2>
+        <p>Jika Anda memiliki pertanyaan atau ingin memberikan masukan, silakan hubungi kami melalui email di <strong>info@beritaviral.com</strong> atau telepon ke <strong>(021) 1234-5678</strong>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Berita Viral. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan/menyembunyikan konten berdasarkan navigasi
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.querySelectorAll('.container').forEach(container => {
+                    container.style.display = 'none';
+                });
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+
+        // Tampilkan konten Home secara default
+        document.getElementById('home').style.display = 'block';
+    </script>
+
+</body>
+</html>
