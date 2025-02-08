@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://portal-viral.github.io/berita/sitemap.xml
